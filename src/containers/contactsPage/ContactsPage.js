@@ -54,7 +54,7 @@ export const ContactsPage = ({contactsList, addNewContact}) => {
           name={name}
           phone={phoneNum}
           email={email}
-          setName={setEmail}
+          setName={setName}
           setPhone={setPhoneNum}
           setEmail={setEmail}
           handleSubmit={handleSubmit}
