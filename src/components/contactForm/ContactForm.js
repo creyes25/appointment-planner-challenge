@@ -16,6 +16,7 @@ export const ContactForm = ({
           type='text' 
           value={name} 
           onChange={(e) => setName(e.target.value)} 
+          placeholder='Name'
           required 
           
         />
@@ -23,7 +24,7 @@ export const ContactForm = ({
           type='tel'
           value={phone} 
           onChange={(e) => setPhone(e.target.value)} 
-          placeholder="000-000-0000"
+          placeholder="Phone (000-000-0000)"
           required 
           pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
         />
@@ -31,6 +32,7 @@ export const ContactForm = ({
           type='email' 
           value={email} 
           onChange={(e) => setEmail(e.target.value)} 
+          placeholder='Email'
           required
         />
         <input type="submit" />
