@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import { RouterProvider, createBrowserRouter, createRoutesFromElements, Route, Navigate } from "react-router-dom"
 import Root, { ROUTES } from "./components/root/Root";
 import { AppointmentsPage } from "./containers/appointmentsPage/AppointmentsPage";
@@ -53,7 +53,7 @@ function App() {
         element={ <ContactsPage contactsList={contacts} addNewContact= {addNewContact} /> }/>
       <Route 
         path={ROUTES.APPOINTMENTS} 
-        element={ <AppointmentsPage appointments={appointments} contacts={contacts} newAppointment={newAppointment} />  }/>
+        element={ <AppointmentsPage appointmentList={appointments} contactsList={contacts} newAppointment={newAppointment} />  }/>
     </Route>
   ));
   
