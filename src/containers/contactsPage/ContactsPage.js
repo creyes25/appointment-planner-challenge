@@ -24,11 +24,9 @@ export const ContactsPage = ({contactsList, addNewContact}) => {
 
     if(!contactExists) {
       addNewContact(name, phoneNum, email)
-      setName(name)
-      setPhoneNum(phoneNum)
-      setEmail(email)
-    } else {
-      contactExists(false)
+      setName('')
+      setPhoneNum('')
+      setEmail('')
     }
 
   };
@@ -39,12 +37,9 @@ export const ContactsPage = ({contactsList, addNewContact}) => {
   */
 
   useEffect(() => {
-    contactsList.forEach((contact) => {
-      if(contact.name === name ) {
-        setContactExists(true)
-      }
-    })
-  }, [name])
+    const exists = contactsList.some(contact => contact.name === name);
+    setContactExists(exists)
+  }, [name, contactsList])
 
   return (
     <div>
